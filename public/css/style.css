@@ -1,0 +1,711 @@
+body{
+  overflow-x: hidden;
+}
+/* Start Nav Bar */
+#mainNavbar {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+@media (max-width: 650px) {
+  #mainNavbar{
+    font-size: 0.7rem;
+  }
+}
+
+#mainNavbar .navbar-brand{
+  font-family: 'Chelsea Market', cursive;
+  color: white;
+  font-size: 1rem;
+}
+
+@media (max-width: 650px){
+  #mainNavbar .navbar-brand{
+    font-size: 0.4rem;
+  }
+}
+
+#mainNavbar .navlink{
+  font-family: 'Nunito', sans-serif;
+  color: white;
+}
+
+#mainNavbar .nav-link:hover{
+  font-family: 'Nunito', sans-serif;
+  color: black;
+}
+
+.navbar.scrolled{
+  background:#5900b3;
+  transition: background 500ms;
+}
+
+.navbar-dark .navbar-toggler-icon {
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler:focus,
+.nvanbar-toggler:active,
+.nvanbar-toggler-icon:focus{
+  outline: none;
+  box-shadow: none;
+}
+/* Start Nav Bar */
+
+/* Start header */
+.header{
+  background-image: url('images/macbook-2560x1440-notebook-laptop-apple-hd-5k-9657.jpeg');
+  background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#heading{
+  font-weight: 100;
+  margin-top:20%;
+  margin-bottom: 30%;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+  color: white;
+  font-family: "Lato";
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translateY(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+        transform: translateY(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translateY(0px);
+    }
+}
+
+#heading h1{
+  font-size: 3.5rem;
+}
+
+#heading img{
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translateY(0px);
+    animation: float 6s ease-in-out infinite;
+}
+
+@media (max-width: 650px) {
+    #heading img{
+        width: 20%;
+        height: 20%;
+        border: 2px white solid;
+    }
+}
+
+#heading h4{
+  color:  #A8A8A8;
+  font-size: 2em;
+}
+
+.web p {
+  display: inline-block;
+  color: #A8A8A8;
+  float: left;
+  opacity: 0.0;
+  animation: port 3s 1 forwards;
+  -webkit-animation: port 3s 1 forwards;
+}
+
+.web p:nth-of-type(2){
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+.web p:nth-of-type(3){
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+.web p:nth-of-type(4){
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+.web p:nth-of-type(5){
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+.web p:nth-of-type(6){
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+
+.web p:nth-of-type(7){
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+
+.web p:nth-of-type(8){
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+
+.web p:nth-of-type(9){
+  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+}
+
+.web p:nth-of-type(10){
+  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.8s;
+}
+
+.web p:nth-of-type(11){
+  animation-delay: 1s;
+  -webkit-animation-delay: 0.8s;
+}
+
+.web p:nth-of-type(12){
+  animation-delay: 1.1s;
+  -webkit-animation-delay: 0.8s;
+}
+
+.web:hover p {
+  animation: reset 1s 1;
+  -webkit-animation: reset 1s 1 ;
+}
+
+@keyframes port {
+  0%{
+    transform: rotateY(90deg) translateY(25%);
+    opacity: 0.0;
+  }
+  100%{
+    transform: rotateY(0deg) translateY(0%);
+    opacity: 1.0;
+  }
+}
+
+@-webkit-keyframes port {
+  0%{
+   -webkit-transform: rotateY(90deg) translateY(25%);
+    opacity: 0.0;
+  }
+  100%{
+    -webkit-transform: rotateY(0deg) translateY(0%);
+    opacity: 1.0;
+  }
+}
+
+@keyframes reset {
+  0%{}
+  100%{}
+}
+
+@-webkit-keyframes reset {
+  0%{}
+  100%{}
+}
+
+@media (max-width: 1000px){
+#heading h1{
+  font-size: 2.5rem;
+}
+
+#heading h4{
+  font-size: 1.5em;
+}
+}
+
+
+@media (max-width: 700px){
+#heading h1{
+  font-size: 1.5rem;
+}
+
+#heading h4{
+  font-size: 0.75em;
+}
+}
+/* End header*/
+
+/* start icons*/
+ul{
+  list-style-type: none;
+}
+
+ul li a{
+  color: #5900b3;
+  text-decoration: none;
+}
+
+ul li a .fa{
+  font-size: 4em;
+  transition: .5s;
+}
+
+ul li a .text{
+  opacity: 0;
+  transition: .5s;
+  transform: translate(20px);
+  padding: 20px;
+}
+
+ul li:hover .fa{
+  transform: translate(-20px) scale(.5);
+} 
+
+#icons{
+  margin:0;
+  text-align: center;
+  right: 0px;
+  position: fixed;
+}
+
+#icons li{
+  padding: 10px;
+}
+/*end icons*/
+
+
+
+hr{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    background-color: #5900b3;
+}
+
+#image img{
+  width: 50%;
+}
+
+
+/*about me*/
+#title h1{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin:40px;
+  padding: 20px;
+  font-family: "Nunito";
+  color: #5900b3;
+}
+
+@media (max-width: 650px){
+  #title h1{
+    font-size: 1.5rem;
+  }
+}
+/*end aboutme*/
+
+#intro p{
+  /*margin-top:auto;
+  margin-bottom:auto;*/
+  font-size: 1.25rem;
+  font-family: "Nunito";
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1000px){
+  #intro p{
+    font-size: 1rem;
+  }
+  
+}
+
+#exp img{
+  /*margin: 5px;*/
+  padding: 5px;
+  width: 100%;
+}
+
+/*#exp text{
+  margin: 20px;
+  padding: 20px;
+}*/
+
+#exp h4, #exp h3{
+  font-size: 1.25rem;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  word-spacing: 2px;
+}
+
+#exp h6{
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: blue;
+}
+
+@media (max-width: 650px){
+  #exp h4,
+  #exp h3{
+    font-size: 0.9rem;
+  }
+  #exp h6{
+    font-size: 0.75rem;
+  }
+  #text p{
+    font-size: 0.7rem;
+  }
+}
+
+.edupic{
+  width: 60px;
+
+}
+
+.copyright {
+    margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  background-color: #5900b3;
+  text-align: center;
+}
+
+.copyright .p-small {
+  color: white;
+}
+
+#Kpool{
+    padding:0;
+}
+
+#Kpool li {
+
+    width: 50%;
+    float: left;
+    list-style-type: none;
+    
+    padding-right: 5.3333333%;
+}
+
+#Kpool li:nth-child(even) { margin-bottom: 2em;}
+
+#Kpool h2 {
+    margin: 0 0 1.5em;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.5rem;
+    
+    padding: 0 0 .25em;
+}
+
+#Kpool p{
+  font-size: 1rem;
+}
+
+@media (max-width: 650px){
+  #Kpool h2 {
+    font-size: 1rem;
+  }
+  #Kpool p{
+    font-size: 0.75rem;
+  }
+}
+
+/* Styling an indeterminate progress bar */
+
+#Kpool progress:not(value) {
+    /* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
+}
+
+/* Styling the determinate progress element */
+
+progress[value] {
+    /* Get rid of the default appearance */
+    appearance: none;
+    
+    /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+    border: none;
+    
+    /* Add dimensions */
+    width: 100%; height: 20px;
+    
+    /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
+      background-color: whiteSmoke;
+      border-radius: 3px;
+      box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+    
+    /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
+    color: royalblue;
+    
+    
+    margin: 0 0 1.5em; 
+}
+
+/*
+Webkit browsers provide two pseudo classes that can be use to style HTML5 progress element.
+-webkit-progress-bar -> To style the progress element container
+-webkit-progress-value -> To style the progress element value.
+*/
+
+#Kpool progress[value]::-webkit-progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
+}
+
+#Kpool progress[value]::-webkit-progress-value {
+    position: relative;
+    
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius:3px;
+    
+    /* Let's animate this */
+    animation: animate-stripes 5s linear infinite;
+}
+
+@keyframes animate-stripes { 100% { background-position: -100px 0; } }
+
+/* Let's spice up things little bit by using pseudo elements. */
+
+/*progress[value]::-webkit-progress-value:after {
+     Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! 
+    content: '';
+    position: absolute;
+    
+    width:5px; height:5px;
+    top:7px; right:7px;
+    
+    background-color: white;
+    border-radius: 100%;
+}*/
+
+/* Firefox provides a single pseudo class to style the progress element value and not for container. -moz-progress-bar */
+
+#Kpool progress[value]::-moz-progress-bar {
+    /* Gradient background with Stripes */
+    /*background-image:
+    -moz-linear-gradient( 135deg,
+                                                     transparent,
+                                                     transparent 33%,
+                                                     rgba(0,0,0,.1) 33%,
+                                                     rgba(0,0,0,.1) 66%,
+                                                     transparent 66%),
+    -moz-linear-gradient( top,
+                                                        rgba(255, 255, 255, .25),
+                                                        rgba(0,0,0,.2)),
+     -moz-linear-gradient( left, #09c, #f44);*/
+    background-color: #5900b3;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius:3px;
+    
+    /* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
+}
+
+#Kpool p[data-value] { 
+  
+  position: relative; 
+}
+
+/* The percentage will automatically fall in place as soon as we make the width fluid. Now making widths fluid. */
+
+/*p[data-value]:after {
+    content: attr(data-value) '%';
+    position: absolute; right:0;
+}*/
+
+
+
+
+
+
+#Kpool .pool::-webkit-progress-value  {
+    /* Gradient background with Stripes */
+    /*background-image:
+    -webkit-linear-gradient( 135deg,
+                                                     transparent,
+                                                     transparent 33%,
+                                                     rgba(0,0,0,.1) 33%,
+                                                     rgba(0,0,0,.1) 66%,
+                                                     transparent 66%),
+    -webkit-linear-gradient( top,
+                                                        rgba(255, 255, 255, .25),
+                                                        rgba(0,0,0,.2)),
+     -webkit-linear-gradient( left, #09c, #f44);*/
+     background-color: #5900b3;
+}
+
+
+
+/* Similarly, for Mozillaa. Unfortunately combining the styles for different browsers will break every other browser. Hence, we need a separate block. */
+
+
+
+/* Now we are good to duplicate html code for other skills and then add the css code for the new skill based on data-skill */
+
+  
+/* THE END */
+
+#button {
+  display: inline-block;
+  background-color: #a9adff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: white;
+}
+#button:hover {
+  cursor: pointer;
+  background:linear-gradient(0deg,steelblue,#5900b3,steelblue );
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav a {
+  text-decoration: none;
+  transition: all 200ms;
+  &:hover,
+  &:focus{
+    color: black;
+  }
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $dkBg;
+  position: fixed;
+  padding: 30px;
+  a {
+    display: inline-flex;
+    padding: 20px 30px;
+    color: #fff;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: white;
+    }
+    &.active {
+    }
+  }
+}
+
+#contactme {
+    width:100%;
+    position:relative;
+    background-color: white;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+    background:white;
+    padding: 40px;
+    border: 2px solid #5900b3;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 auto;
+    min-width: 100%;
+    padding: 0;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+    width:100%;
+    border:1px solid #CCC;
+    background:#a9adff;
+    margin:0 0 5px;
+    padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+    -webkit-transition:border-color 0.3s ease-in-out;
+    -moz-transition:border-color 0.3s ease-in-out;
+    transition:border-color 0.3s ease-in-out;
+    border:1px solid #AAA;
+}
+
+#contact textarea {
+    height:100px;
+    max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+    cursor:pointer;
+    width: 50%;
+    border:none;
+    background:#5900b3;
+    color:white;
+    padding:10px;
+    font-size:15px;
+    margin-left: 25%;
+}
+
+#contact button[type="submit"]:hover {
+    background:linear-gradient(0deg,steelblue,#5900b3,steelblue );
+    -webkit-transition:background 0.3s ease-in-out;
+    -moz-transition:background 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+    outline:0;
+    border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#5900b3;
+}
+:-moz-placeholder {
+ color:#5900b3;
+}
+::-moz-placeholder {
+ color:#5900b3;
+}
+:-ms-input-placeholder {
+ color:#5900b3;
+}
+
+
+#Kpool img{
+  width: 30px;
+}
+
+.concept{
+  height: 30px;
+}
+
+@media (max-width: 400px){
+  #Kpool img{
+    width: 20px;
+  }
+  .concept{
+    height: 21px;
+  }
+}
