@@ -1,0 +1,22 @@
+{
+    "name" : "Rajat Shrivastava",
+    "short_name" : "Rajat Shrivastava",
+    "lang": "en-US",
+    "categories": ["education"],
+    "icons": [
+      {
+        "src" : "images/pwa-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+     
+    ],
+    "description": "Rajat Shrivastava is a student of B.Tech Second year in Abes Engineering College. Know more about him.",
+    "start_url" : "/",
+    "background_color" : "#48C9B0",
+    "display" : "standalone",
+    "orientation" : "portrait-primary",
+    "scope" : "/",
+    "theme_color" : "#48C9B0"
+    
+}

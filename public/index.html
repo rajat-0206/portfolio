@@ -1,11 +1,11 @@
-
-<html lang="en" style="scroll-behavior: smooth;">
+<html style="scroll-behavior: smooth">
 <head>
 	
 	<!-- Responsive -->
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "manifest" href="/manifest.json">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-16LE">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
 <meta property="og:description" content="Rajat Shrivastava is a student of B.Tech Second year in Abes Engineering College. Know more about him.">
 <meta property="og:image" content="https://knowrajatmore.web.app/images/2-512.png">
 
-<meta name="theme-color" content="#498dcc">
+<meta name="theme-color" content="#48C9B0">
   	
   	<!-- Title -->
   	<title>Rajat Shrivastava</title>
@@ -41,6 +41,7 @@
   	<!-- Custom CSS -->
 <link rel="stylesheet" href="css/style.css">
 <script src="scripts/scripts.js"></script>
+
 
 </head>
 <body>
@@ -86,7 +87,7 @@
 				<!-- start intro -->
 				<div class="col-lg-10">
 					<div class="content" id="heading">
-						<img src="images/2-512.png" height="150px;width:150px">
+						<img src="/images/2-512.png" height="150px;width:150px">
 						<h1><span>Rajat Shrivastava</span></h1>
 						<div class="web"><h5>
 						  <p>P</p>
@@ -428,14 +429,18 @@
 
 
     
-<!-- jQuery -->
-<script type="text/javascript" src="js/lib/jquery-3.5.1.min.js"></script>
-
-<!-- Bootstrap JS -->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-<!-- Custom JS -->
-<script type="text/javascript" src="js/script.js"></script>
-
+<script>
+     if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
 </body>
 </html>
