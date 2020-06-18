@@ -50,12 +50,12 @@
 	<a id="button" class="col-md-0 d-none d-md-block"></a>
 
 	<!-- start NavBar  -->
-	<nav class=" navbar navbar-dark navbar-expand-md py-0 fixed-top" id="mainNavbar">
+	<nav class=" navbar navbar-light navbar-expand-md py-0 fixed-top" id="mainNavbar">
 		<a class="navbar-brand" href="#header">RaJaT</a>
-		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarLinks" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon" style="outline: none; color: black;"></span>
+		<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarLinks" aria-label="Toggle navigation" style="margin-top:3px"onclick="bgchange()">
+			<span class="navbar-toggler-icon" style="outline: none; color: black;" ></span>
 		</button>
-		<div class="collapse navbar-collapse" id="navbarLinks">
+		<div class="collapse navbar-collapse" id="navbarLinks" style="#background-color:#f8f8f8;">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
 					<a href="#header" class="nav-link active">HOME</a>
@@ -430,7 +430,7 @@
 
     
 <script>
-     if ('serviceWorker' in navigator) {
+     {% comment %} if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/sw.js').then(function(registration) {
       // Registration was successful
@@ -439,7 +439,7 @@
       // registration failed :(
       console.log('ServiceWorker registration failed: ', err);
     });
-  });
+  }); {% endcomment %}
 }
 </script>
 </body>

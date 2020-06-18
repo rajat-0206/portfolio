@@ -9,6 +9,9 @@ $(function(){
 
 var btn = $('#button');
 
+function bgchange() {
+    document.getElementById('mainNavbar').classList.toggle('bgcolor');
+}
 $(window).scroll(function() {
 if ($(window).scrollTop() > 300) {
 btn.addClass('show');

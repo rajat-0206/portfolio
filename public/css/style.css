@@ -7,9 +7,28 @@ body{
   font-size: 1rem;
 }
 
+#mainNavbar:hover {
+  background:#fff;
+  transition: background 500ms;
+}
+#mainNavbar:hover .navbar-brand {
+  color:#333;
+  transition: color 500ms;
+}
+
 @media (max-width: 650px) {
   #mainNavbar{
     font-size: 0.7rem;
+    
+  }
+
+  #header {
+    height:100%;
+
+  }
+
+  #heading {
+    margin-top:50%;
   }
 }
 
@@ -20,9 +39,7 @@ body{
 }
 
 @media (max-width: 650px){
-  #mainNavbar .navbar-brand{
-    font-size: 0.4rem;
-  }
+
 }
 
 #mainNavbar .navlink{
@@ -34,9 +51,14 @@ body{
   font-family: 'Nunito', sans-serif;
   color: black;
 }
+.bgcolor{
+  background:#ccc;
+  transition: background 1s;
+}
+
 
 .navbar.scrolled{
-  background:#5900b3;
+  background:#fff;
   transition: background 500ms;
 }
 
@@ -70,6 +92,7 @@ body{
   font-family: "Lato";
 }
 
+
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -99,10 +122,13 @@ body{
 }
 
 @media (max-width: 650px) {
+
+  #heading {
+    margin-top:50%;
+  }
     #heading img{
-        width: 20%;
-        height: 20%;
-        border: 2px white solid;
+        width: 100px;
+        height: 100px;
     }
 }
 
