@@ -1,6 +1,70 @@
 body{
   overflow-x: hidden;
 }
+.carousel {
+  background-color: rgba(0,0,0,0.5);
+  padding:20px;
+  height:700px;
+}
+.carousel-item img {
+    width:90%;
+    height:90%;
+    margin:0px auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+}
+
+.carousel-caption{
+  background-color: rgba(0,0,0,0.5);
+  padding:5px;
+  border-radius: 20px;
+  color:#fff;
+}
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* Sticky footer position and size
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+.footer {
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  min-height: 300px;
+  z-index: 11;
+}
+
+/* Taller footer on small screens */
+@media (max-width: 34em) {
+    body {
+      margin-bottom: 500px;
+    }
+}
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+
+/* .carousel-inner{
+  background-color: #333;
+} */
+
+.carousel-control-prev,.carousel-control-next{
+  color:#333;
+  width:40px;
+  height:100px;
+  top:40%;
+  opacity:0.7:
+  padding:10px;
+}
+.carousel-control-prev,.carousel-control-next{
+  opacity: 1;
+}
 /* Start Nav Bar */
 #mainNavbar {
   font-weight: 100;
@@ -21,6 +85,15 @@ body{
     font-size: 0.7rem;
     
   }
+ .carousel{
+   height:400px;
+ }
+  .carousel-control-prev,.carousel-control-next{
+    top:40%;
+    height:70px;
+    width:40px;
+    font-size: 20px;
+  }
 
   #header {
     height:100%;
@@ -34,11 +107,20 @@ body{
 
 #mainNavbar .navbar-brand{
   font-family: 'Chelsea Market', cursive;
-  color: white;
+  color: #333;
   font-size: 1rem;
 }
 
+@media (max-width: 500px){
+  .carousel-item img{
+    height:100%;
+  }
+}
 @media (max-width: 650px){
+
+  footer a {
+    font-size: 2rem;
+  }
 
 }
 
@@ -52,7 +134,7 @@ body{
   color: black;
 }
 .bgcolor{
-  background:#ccc;
+  background:c#ccc;
   transition: background 1s;
 }
 
@@ -60,6 +142,10 @@ body{
 .navbar.scrolled{
   background:#fff;
   transition: background 500ms;
+}
+
+.navbar.scrolled .navbar-brand{
+  color:#333;
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -271,7 +357,6 @@ ul li a{
 }
 
 ul li a .fa{
-  font-size: 4em;
   transition: .5s;
 }
 
@@ -282,9 +367,6 @@ ul li a .text{
   padding: 20px;
 }
 
-ul li:hover .fa{
-  transform: translate(-20px) scale(.5);
-} 
 
 #icons{
   margin:0;
@@ -734,4 +816,31 @@ fieldset {
   .concept{
     height: 21px;
   }
+}
+
+footer {
+  padding-top: 30px;
+  background-color: #292c2f;
+  color: #bbb;
+}
+
+footer a {
+  color: #999;
+  font-size: 1em;
+  text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+  color: #aaa;
+  text-decoration:none;
+  border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
 }
