@@ -1,3 +1,8 @@
+
+
+
+
+
 // start navbar
 $(function(){
     $(document).scroll(function(){

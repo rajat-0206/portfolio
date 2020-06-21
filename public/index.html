@@ -2,6 +2,7 @@
 <head>
 	<!-- Responsive -->
 	<meta charset="utf-8">
+	<script src="scripts/mail.js"></script> 
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel = "manifest" href="/manifest.json">
@@ -41,6 +42,9 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="scripts/scripts.js"></script>
 <style>
+body{
+	margin-bottom:0px;
+}
 .loadcon{
 	position:fixed;
 	width:100%;
@@ -482,12 +486,12 @@ window.onload = function(){
           	<li>
 							<h3><a href="https://rajathandsom.pythonanywhere.com/">Agyavart</a></h3>
 							<h6>May 2020 - Present</h6>
-							<p>This is a progressive web app made using Django backend server. It aim and providing people to send secret message to someone without revialing their identity. Its realtime, fast and interactive UI makes it a perfect PWA.</p>
+							<p>This is a progressive web app made using Django backend server. It aim is to provide people a safe way to send secret message to someone without revealing their identity. Its realtime, fast and interactive UI makes it a perfect PWA.</p>
               <br></li> 
             	<li>
 							<h3>Chatting App</h3>
 							<h6>May 2020 - Present</h6>
-							<p>This is a Django based app which will facilate users to do realtime chats. Web Socket layers have been implemented thorugh Django Channels. It will also provide video and audio call facility thorugh webRTC.</p>
+							<p>This is a Django based app which will facilitate users to do realtime chats. Web Socket layers have been implemented thorugh Django Channels. It will also provide video and audio call facility thorugh webRTC.</p>
 						<br></li> 
 						<li>
 							<br><h4><a href="https://gst-system.web.app/">GST System - no tax evasion (Block Chain)</a></h4>
@@ -498,17 +502,17 @@ window.onload = function(){
 						<li>
 							<h4><a href="http://pantomimical-finish.000webhostapp.com/home.php" >Smart Attendance System for Manrega Workers</a></h4>
 							<h6>SIH 2020</h6>
-							<p>This was a web pased project which marks the attendance of Manrega workers through face recognition technology. It uses advance javascript API to recognise the face. The system aims at reducing corruption and providing trasparancy in the lowest level of goverance. <br></p>
+							<p>This was a web based project which marks the attendance of Manrega workers through face recognition technology. It uses advance javascript API to recognise the face. The system aims at reducing corruption and providing trasparancy in the lowest level of governance. <br></p>
 					<br>	</li> 
 						<li>
 							<h4><a href="https://github.com/rajathandsom/projectpython.github.io">Jumble Juggle</a></h4>
 							<h6>Mini-Project in 2nd year</h6>
-							<p>This was a simple game built in Python and uses Firebase as database. It aimed at improving vocablury of students by a simple game of jumble words.</p>
+							<p>This was a simple game built in Python and uses Firebase as database. It aimed at improving vocabulary of students by a simple game of jumble words.</p>
 					<br>	</li>
             	<li>
 							<h4><a href="https://https://github.com/rajathandsom/Messenger">Messenger</a></h4>
 							<h6>Mini Project for 12 C++ practical</h6>
-							<p>This is a simple c++ based CLI messaging application through which users can send message to each.</p>
+							<p>This is a simple c++ based CLI messaging application through which users can send message to each other.</p>
 						</li>
 					</ul>	
 				</div>
@@ -521,7 +525,7 @@ window.onload = function(){
 		<div id="title" class="container">
 			<div class="row" id="certificate">
 				<div class="col-lg-12 col-md-12">
-					<h1><i class="fas fa-user"></i>Achievement and Certifications</h1>
+					<h1><i class="fas fa-graduation-cap"></i>Achievement and Certifications</h1>
 				</div>
 			</div>
 		</div>
@@ -552,7 +556,7 @@ window.onload = function(){
   <img src="images/cisco python.jpg" alt="Cisco Python Certificate">
   <div class="carousel-caption d-none d-md-block">
     <h5 >Python for data science</h5>
-    <p >CISCO certification by course carried in college itself.</p>
+    <p >CISCO certification through course carried in college itself.</p>
   </div>
 </div>
    <div class="carousel-item">
@@ -566,9 +570,23 @@ window.onload = function(){
   <img src="images/Smart Contract.jpg" alt="Smart Contract">
   <div class="carousel-caption d-none d-md-block">
     <h5>Smart Contract of Blockchain</h5>
-    <p>The courseEra course on creation and managemen of smart contract by Buffalo University.</p>
+    <p>The courseEra course on creation and management of smart contract by Buffalo University.</p>
   </div>
 </div>
+<div class="carousel-item">
+	<img src="images/blockchain.jpg" alt="Blockchain Basic">
+	<div class="carousel-caption d-none d-md-block">
+	  <h5 >HTML Indroction</h5>
+	  <p >The courseEra course on the introduction and basics of HTML.</p>
+	</div>
+  </div>
+	<div class="carousel-item">
+	<img src="images/Smart Contract.jpg" alt="Smart Contract">
+	<div class="carousel-caption d-none d-md-block">
+	  <h5>Neural Network</h5>
+	  <p>The courseEra course hand on course on Neural network on streamlit web app.</p>
+	</div>
+  </div>
 </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -602,15 +620,15 @@ window.onload = function(){
                 <hr>
             </div>
             <div class="col-md-5">
-                <form>
+                <form method="post">
                     <fieldset class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        <input type="email" class="form-control" id="sender" placeholder="Enter email">
                     </fieldset>
                     <fieldset class="form-group">
-                        <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                        <textarea class="form-control" id="content" placeholder="Message"></textarea>
                     </fieldset>
                     <fieldset class="form-group text-xs-right">
-                        <button type="button" class="btn btn-primary btn-lg">Send</button>
+                        <button type="button" class="btn btn-primary btn-lg" onclick="sendEmail()">Send</button>
                     </fieldset>
                 </form>
             </div>
@@ -618,8 +636,6 @@ window.onload = function(){
     </div>
 </footer>
 
-
-    
 <script>
  if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
