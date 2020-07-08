@@ -5,7 +5,7 @@
     "categories": ["education"],
     "icons": [
       {
-        "src" : "images/pwa-192x192.png",
+        "src" : "img/pwa-192x192.png",
         "type": "image/png",
         "sizes": "192x192"
       }
