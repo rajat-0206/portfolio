@@ -1,9 +1,6 @@
 var CACHE_NAME = 'rajat-cache-v1';
 var urlsToCache = [
-  '/index.html',
-  '/images/bg.jpg',
-  '/images/rajat.jpg',
-  '/images/edu.png',
+  '/',
   
 ];
 

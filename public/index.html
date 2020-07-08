@@ -37,17 +37,23 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+<script>
+	
+setInterval(function(){
+	document.getElementById('loadcon').style.display="none";
+},2000);
+	
 
-  <!-- =======================================================
-    Theme Name: Regna
-    Theme URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+
+</script>
 </head>
 
 <body>
-
+	<div class="loadcon" id="loadcon"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div>
+	<br>
+	<span class="bottom">Loading</span>
+	</div>
+	</div>
   <!--==========================
   Header
   ============================-->
@@ -86,7 +92,7 @@
       <a href="#about" class="btn-get-started">About</a>
     </div>
   </section><!-- #hero -->
-  <div class="icon-bar" id="iconss">
+  <div class="icon-bar" id="iconss" style="display: none;">
 	<a href="https://www.twitter.com/rajathandsom/" class="twitter"><i class="fa fa-twitter"></i></a>
 	<a href="https://www.facebook.com/rajathandsom/" class="facebook"><i class="fa fa-facebook"></i></a>
 	<a href="https://www.twitter.com/__raj.at__/" class="instagram"><i class="fa fa-instagram"></i></a>
