@@ -12,10 +12,14 @@ jQuery(document).ready(function ($) {
       document.getElementById('scrollimg').style.display='none';
     }
     if($(this).scrollTop() > 5500 || $(this).scrollTop() < 300 ){
+
       document.getElementById('iconss').style.display = 'none';
     }
     else{
+      if(screen.width>991)
+      {
       document.getElementById('iconss').style.display = 'block';
+      }
     }
   });
   $('.back-to-top').click(function () {
