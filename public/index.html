@@ -560,10 +560,10 @@ setInterval(function(){
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <textarea class="form-control" id="message" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="text-center"><button type="button" onclick="sendmail()">Send Message</button></div>
               </form>
             </div>
           </div>
@@ -613,6 +613,7 @@ setInterval(function(){
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 <script>
+
  if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/sw.js').then(function(registration) {
@@ -639,6 +640,35 @@ function showDivs(n) {
     x[i].style.display = "none";
   }
   x[slideIndex-1].style.display = "block";
+}
+
+async function getData(url) {
+  const response = await fetch(url, {
+    method: 'GET',
+    mode: 'no-cors',
+    cache: 'no-cache', 
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', 
+    referrerPolicy: 'no-referrer', 
+  });
+  return "done";
+}
+
+
+function sendmail(){
+    Name = document.getElementById("name").value;
+    Email = document.getElementById("email").value;
+    subject = document.getElementById("subject").value;
+    message = document.getElementById("message").value;
+    body = "<h4>Name:"+Name+"<br>Email: "+Email+"<br>Subject: "+subject+"<br>Message: "+message +"</h4>";
+    var url =  'https://smartmenu.pythonanywhere.com/mail?from=noreply.jumblejuggle@gmail.com&to=rajat123468@gmail.com&subject=Contact from https://knowrajatmore.web.app&body=You got some message&html='+body
+    getData(url);
+    reply = "<h4> Hii "+ Name +", <br><br>Hope you are well. <br><br> I have received your query subjected - <b>"+subject+"</b>.<br><br>I will contact to you shortly with more details. <br><br>Regards,</h6><br><h3>Rajat Shrivastava</h3>";
+    var url = 'https://smartmenu.pythonanywhere.com/mail?from=noreply.jumblejuggle@gmail.com&to='+Email+'&subject=Contact from https://knowrajatmore.web.app&body=You got some message&html='+reply
+    getData(url);
 }
 </script>
 </body>
