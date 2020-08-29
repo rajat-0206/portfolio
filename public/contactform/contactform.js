@@ -1,13 +1,13 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   "use strict";
 
   //Contact
-  $('form.contactForm').click(function() {
+  $('form.contactForm').submit(function () {
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
-    f.children('input').each(function() { // run all inputs
+    f.children('input').each(function () { // run all inputs
 
       var i = $(this); // current input
       var rule = i.attr('data-rule');
@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
             break;
 
           case 'checked':
-            if (! i.is(':checked')) {
+            if (!i.is(':checked')) {
               ferror = ierror = true;
             }
             break;
@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
         i.next('.validation').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
-    f.children('textarea').each(function() { // run all inputs
+    f.children('textarea').each(function () { // run all inputs
 
       var i = $(this); // current input
       var rule = i.attr('data-rule');
@@ -90,6 +90,7 @@ jQuery(document).ready(function($) {
     });
     if (ferror) return false;
     else var str = $(this).serialize();
+    sendmail();
     $("#sendmessage").addClass("show");
     $("#errormessage").removeClass("show");
     $('.contactForm').find("input, textarea").val("");
@@ -97,3 +98,33 @@ jQuery(document).ready(function($) {
   });
 
 });
+
+async function getData(url) {
+  const response = await fetch(url, {
+    method: 'GET',
+    mode: 'no-cors',
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow',
+    referrerPolicy: 'no-referrer',
+  });
+  return "done";
+}
+
+
+function sendmail() {
+  Name = document.getElementById("name").value;
+  Email = document.getElementById("email").value;
+  subject = document.getElementById("subject").value;
+  message = document.getElementById("message").value;
+  body = "<h4>Name:" + Name + "<br>Email: " + Email + "<br>Subject: " + subject + "<br>Message: " + message + "</h4>";
+  var url = 'https://smartmenu.pythonanywhere.com/mail?from=noreply.jumblejuggle@gmail.com&to=sadesh1168@gmail.com&subject=Contact from https://knowrajatmore.web.app&body=You got some message&html=' + body
+  getData(url);
+  reply = "<h4> Hii " + Name + ", <br><br>Hope you are well. <br><br> I have received your query subjected - <b>" + subject + "</b>.<br><br>I will contact to you shortly with more details. <br><br>Regards,</h6><br><h3>Rajat Shrivastava</h3>";
+  var url = 'https://smartmenu.pythonanywhere.com/mail?from=noreply.jumblejuggle@gmail.com&to=' + Email + '&subject=Contact from https://knowrajatmore.web.app&body=You got some message&html=' + reply
+  getData(url);
+
+}

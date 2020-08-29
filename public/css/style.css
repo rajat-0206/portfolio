@@ -93,6 +93,7 @@ body {
 ::-webkit-scrollbar {
   width: 10px;
   border-radius: 20px;
+  background: transparent;
 }
 
 /* Track */
@@ -1062,7 +1063,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
 }
 
-#contact .form button[type="button"] {
+#contact .form button[type="submit"] {
   background: #2dc997;
   border: 0;
   padding: 10px 24px;
@@ -1070,7 +1071,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: 0.4s;
 }
 
-#contact .form button[type="button"]:hover {
+#contact .form button[type="submit"]:hover {
   background: #51d8ad;
 }
 
