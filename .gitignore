@@ -63,3 +63,10 @@ node_modules/
 
 # dotenv environment variables file
 .env
+/package-lock.json
+/firebase.json
+/.firebaserc
+/_config.yml
+/node_modules
+/functions
+/public/contactform/contactform.js
