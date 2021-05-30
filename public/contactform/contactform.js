@@ -121,10 +121,10 @@ function sendmail() {
   subject = document.getElementById("subject").value;
   message = document.getElementById("message").value;
   body = "<h4>Name:" + Name + "<br>Email: " + Email + "<br>Subject: " + subject + "<br>Message: " + message + "</h4>";
-  var url = 'https://smartmenu.pythonanywhere.com/mail?from=noreply.jumblejuggle@gmail.com&to=sadesh1168@gmail.com&subject=Contact from https://knowrajatmore.web.app&body=You got some message&html=' + body
+  var url = 'https://smartmenu.pythonanywhere.com/mail?from=noreply.jumblejuggle@gmail.com&to=rajat123468@gmail.com&subject=Contact from https://itsrajat.xyz&body=You got some message&html=' + body
   getData(url);
   reply = "<h4> Hii " + Name + ", <br><br>Hope you are well. <br><br> I have received your query subjected - <b>" + subject + "</b>.<br><br>I will contact to you shortly with more details. <br><br>Regards,</h6><br><h3>Rajat Shrivastava</h3>";
-  var url = 'https://smartmenu.pythonanywhere.com/mail?from=noreply.jumblejuggle@gmail.com&to=' + Email + '&subject=Contact from https://knowrajatmore.web.app&body=You got some message&html=' + reply
+  var url = 'https://smartmenu.pythonanywhere.com/mail?from=noreply.jumblejuggle@gmail.com&to=' + Email + '&subject=Contact from https://itsrajat.xyz&body=You got some message&html=' + reply
   getData(url);
 
 }
